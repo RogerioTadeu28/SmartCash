@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+/* FORM */
+.form-section {
+    background: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+/* FILTROS */
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.filtros input,
+.filtros select {
+    flex: 1;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background: #eff6ff;
+}
+
+/* BOTÕES */
+.btn-edit {
+    background: #2563eb;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background: #dc2626;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    background: #1e40af;
+}
+
+.btn-delete:hover {
+    background: #b91c1c;
+}
+
+/* SALDO */
+.positivo {
+    color: #16a34a;
+}
+
+.negativo {
+    color: #dc2626;
+}
+
+/* TOAST */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #16a34a;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: .3s;
+    z-index: 1000;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* GRÁFICOS */
+.chart-section {
+    background: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.chart-header h2 {
+    font-size: 18px;
+    color: #1f2937;
+}
+
+.chart-controls select {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+/* DASHBOARD */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.card span {
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .filtros {
+        flex-direction: column;
+    }
+
+    .chart-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .chart-wrapper {
+        height: 220px;
+    }
+
+    .chart-section>div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+    }
+}
