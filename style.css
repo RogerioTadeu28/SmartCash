@@ -243,3 +243,13 @@ th {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* HEADER */
+footer {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin: 10px;
+}

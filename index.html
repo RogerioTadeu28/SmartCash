@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cash – Controle Financeiro</title>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js">
+    </script>
+
     <link rel="stylesheet" href="style.css">
-    <title>Smart Cash</title>
-    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-    <!-- MsgConfirmação-->
-    <div id="msgConfirm" class="msgConfirm"></div>
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
 
     <header>
         <h1>Smart Cash</h1>
@@ -18,10 +24,10 @@
 
     <main class="container">
 
-        <!--DASHBOARD-->
+        <!-- DASHBOARD -->
         <section class="dashboard">
             <div class="card">
-                <h3>Entrada</h3>
+                <h3>Entradas</h3>
                 <span id="totalEntradas">R$ 0,00</span>
             </div>
             <div class="card">
@@ -36,7 +42,7 @@
                 <h3>Maior Gasto</h3>
                 <span id="maiorCategoria">-</span>
             </div>
-        </SECtion>
+        </section>
 
         <!-- FORMULÁRIO -->
         <section class="form-section">
@@ -126,9 +132,12 @@
         </section>
 
     </main>
-    
-    <footer>
-        <p>&copy;<span id="ano"></span> - Rogerio Tadeu</p>
-    </footer>
+
+    <script src="script.js"></script>
 </body>
+
+<footer>
+    <p>&copy; 2026 <span id="ano"></span>SmartCash - Dashboard Financeiro - Rogerio Tadeu</p>
+</footer>
+
 </html>
